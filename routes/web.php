@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BookingController;
+use App\Models\Booking;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +17,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/test', function () {
+    return Booking::getAvailableTrips(20,22);
 });
