@@ -8,9 +8,4 @@ use Illuminate\Database\Eloquent\Model;
 class Station extends Model
 {
     use HasFactory;
-
-    // public function routes()
-    // {
-    //     $this->hasMany('App\Models\Route', )
-    // }
 }
