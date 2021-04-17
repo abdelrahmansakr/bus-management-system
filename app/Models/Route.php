@@ -33,7 +33,6 @@ class Route extends Model
     {
         $route_trips = $this->trips;
         $route_bookings = $this->bookings->groupBy('trip_id');
-
         $trips_available_seats = [];
         foreach ($route_trips as $key => $trip) {
             $trip_seats["trip_id"] = $trip->id;
