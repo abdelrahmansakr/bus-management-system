@@ -19,5 +19,15 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+/* GetAvailableSeat
+|  {from}: start station id
+|  {to}: end station id
+*/
 Route::get('available-seats/{from}/{to}', [BookingController::class, 'getAvailableSeats']);
+
+/* BookSeat
+|  {from_station}: start station id
+|  {to_station}: end station id
+|  {user_id}: user id
+*/
 Route::post('book-seat', [BookingController::class, 'bookSeat']);
